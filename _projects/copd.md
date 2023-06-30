@@ -1,11 +1,10 @@
 ---
-title: "COPD"
+title: "Machine Learning in pulmonary function diagnostic"
 collection: projects
 type: "Project"
+url: "https://fiw.thws.de/en/studies/student-projects/machine-learning-in-pulmonary-function-diagnostic/"
 permalink: /projects/copd
-venue: "MiWoCI'23, UAS Mittweida"
 date: 2023-08-23
-location: "Mittweida, Germany"
 ---
 
-In this talk I will present current challenges in graph neuronal networks (GNN), namely the two well-known problems of over-squashing and over-smoothing the representations. After gaining intuition about the problems, I will present ideas from literature how to overcome these issues. This talk ends by providing the current ideas for my master thesis, namely incorporating the concept of Hamiltonian dynamics.
+Analyzed a medical dataset of COPD patients in a team of four students (bachelor level); Developed explainable machine learning models using Python and Scikit-learn to distinguish between healthy patients and pre-stage patients; 
