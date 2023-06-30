@@ -10,7 +10,7 @@ locale                   : "de-DE"
 title                    : "Simon Heilig"
 title_separator          : "-"
 name                     : &name "Simon Heilig"
-description              : &description "personal description"
+description              : &description "M.Sc. Data Science"
 url                      : https://simonheilig.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "simonheilig/simonheilig.github.io"
@@ -82,10 +82,10 @@ analytics:
 author:
   name             : "Simon Heilig"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Last year student in M.Sc. Data Science @ FAU"
   location         : "Erlangen, Germany"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : 
   googlescholar    : "https://scholar.google.de/citations?user=znbQrPoAAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
