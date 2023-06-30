@@ -4,8 +4,9 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
+TEST 1 2 3
 {% if author.googlescholar %}
+  ZWEITER TEST
   You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
 {% endif %}
 
