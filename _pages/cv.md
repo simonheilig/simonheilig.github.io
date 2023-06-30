@@ -9,6 +9,7 @@ redirect_from:
 
 {% include base_path %}
 [Download CV.pdf](https://simonheilig.github.io/files/cv.pdf)
+
 Education
 ======
 * B.Eng. in Computer Science, University of Applied Sciences Würzburg-Schweinfurt, 2021
