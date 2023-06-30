@@ -8,52 +8,22 @@ redirect_from:
 ---
 
 {% include base_path %}
-
+[Download CV.pdf](https://simonheilig.github.io/files/cv.pdf)
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.Eng. in Computer Science, University of Applied Sciences Würzburg-Schweinfurt, 2021
+* M.Sc. in Data Science, University of Erlangen-Nürnberg, 2024
+
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Mar. 2023 - Sept. 2024: Student Research Assistant
+  * University of Erlangen-Nürnberg
+  * Tasks: Advanced deep learning for medical imaging
+  * Supervisor: Professor Kainz
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Mar. 2021 - Sept. 2021: Research Assistant (full-time)
+  * University of Applied Sciences Würzburg-Schweinfurt
+  * Tasks: Large-scale machine learning
+  * Supervisor: Professor Schleif
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
