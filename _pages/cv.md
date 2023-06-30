@@ -12,8 +12,8 @@ redirect_from:
 
 Education
 ======
-* B.Eng. in Computer Science, University of Applied Sciences Würzburg-Schweinfurt, 2021
 * M.Sc. in Data Science, University of Erlangen-Nürnberg, 2024
+* B.Eng. in Computer Science, University of Applied Sciences Würzburg-Schweinfurt, 2021
 
 
 Work experience
@@ -27,4 +27,6 @@ Work experience
   * University of Applied Sciences Würzburg-Schweinfurt
   * Tasks: Large-scale machine learning
   * Supervisor: Professor Schleif
+
+
   
