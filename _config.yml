@@ -75,9 +75,9 @@ social:
 analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google: 
-    tracking_id          :
+    tracking_id          : G-QRB9M12Z85
 
-
+google_analytics: G-QRB9M12Z85
 # Site Author
 author:
   name             : "Simon Heilig"
