@@ -9,3 +9,4 @@ You can find my articles on <a href="https://scholar.google.de/citations?user=zn
 
 {% include base_path %}
 
+{% for post in site.publications reversed %} {% include archive-single.html %} {% endfor %}
