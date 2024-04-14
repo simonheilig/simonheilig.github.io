@@ -18,7 +18,7 @@ Education
 
 Work experience
 ======
-* Mar. 2023 - Sept. 2024: Student Research Assistant
+* Mar. 2023 - Sept. 2023: Student Research Assistant
   * University of Erlangen-Nürnberg
   * Tasks: Advanced deep learning for medical imaging
   * Supervisor: Professor Kainz
