@@ -77,6 +77,7 @@
       border-radius: 16px;
     }
 
+      /* Balloon base styles */
     .balloon {
       position: absolute;
       width: 60px;
@@ -84,41 +85,15 @@
       background-color: transparent;
       background-size: cover;
       background-position: center;
-      animation: flyAway 8s ease-out forwards;
+      animation: flyAway 4s ease-out forwards;
       z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
     }
 
-    .balloon1 {
-      left: 50%;
-      transform: translateX(-50%) rotate(-10deg);
-      animation-name: flyAway1;
-    }
-
-    .balloon2 {
-      left: 35%;
-      transform: translateX(-50%) rotate(10deg);
-      animation-name: flyAway2;
-    }
-
-    .balloon3 {
-      left: 65%;
-      transform: translateX(-50%) rotate(5deg);
-      animation-name: flyAway3;
-    }
-
-    @keyframes flyAway1 {
-      0% { bottom: 100px; opacity: 1; }
-      100% { bottom: 100vh; left: 30%; opacity: 0; }
-    }
-
-    @keyframes flyAway2 {
-      0% { bottom: 100px; opacity: 1; }
-      100% { bottom: 100vh; left: 20%; opacity: 0; }
-    }
-
-    @keyframes flyAway3 {
-      0% { bottom: 100px; opacity: 1; }
-      100% { bottom: 100vh; left: 70%; opacity: 0; }
+    @keyframes flyAway {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
     }
   </style>
 </head>
@@ -233,13 +208,31 @@
       '/images/head3.png'
     ];
     const container = document.body;
+    const centerX = window.innerWidth / 2;
 
-    balloonImages.forEach((src, i) => {
+    balloonImages.forEach((src) => {
       const balloon = document.createElement('div');
-      balloon.classList.add('balloon', `balloon${i + 1}`);
+      balloon.classList.add('balloon');
       balloon.style.backgroundImage = `url(${src})`;
-      balloon.style.bottom = '100px';
+
+      // Randomize starting position near the card
+      const randomOffsetX = (Math.random() - 0.5) * 200; // -100px to +100px from center
+      const randomBottom = 80 + Math.random() * 40;       // 80px to 120px from bottom
+      const startLeft = centerX + randomOffsetX;
+
+      balloon.style.left = `${startLeft}px`;
+      balloon.style.bottom = `${randomBottom}px`;
+
+      // Animate upward
+      balloon.style.animationName = 'flyAway';
+
       container.appendChild(balloon);
+
+      // Trigger fade-in immediately
+      requestAnimationFrame(() => {
+        balloon.style.opacity = 1;
+      });
+
 
       // Clean up after animation
       setTimeout(() => {
