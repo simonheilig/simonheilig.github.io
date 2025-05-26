@@ -84,7 +84,7 @@
       background-color: transparent;
       background-size: cover;
       background-position: center;
-      animation: flyAway 4s ease-out forwards;
+      animation: flyAway 8s ease-out forwards;
       z-index: 2;
     }
 
@@ -215,16 +215,14 @@
   // Card Flip and Balloon Logic
   const card = document.getElementById('giftCard');
   let flipped = false;
-  let balloonsLaunched = false;
 
   card.addEventListener('click', () => {
     flipped = !flipped;
     card.classList.toggle('flipped');
 
-    if (flipped && !balloonsLaunched) {
+    if (flipped) {
       addConfetti(600);
       launchBalloons();
-      balloonsLaunched = true;
     }
   });
 
@@ -243,10 +241,10 @@
       balloon.style.bottom = '100px';
       container.appendChild(balloon);
 
-      // Remove balloon after animation
+      // Clean up after animation
       setTimeout(() => {
         container.removeChild(balloon);
-      }, 4000);
+      }, 8000);
     });
   }
 </script>
