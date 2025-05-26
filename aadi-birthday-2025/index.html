@@ -76,6 +76,50 @@
       object-fit: cover;
       border-radius: 16px;
     }
+
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 80px;
+      background-color: transparent;
+      background-size: cover;
+      background-position: center;
+      animation: flyAway 4s ease-out forwards;
+      z-index: 2;
+    }
+
+    .balloon1 {
+      left: 50%;
+      transform: translateX(-50%) rotate(-10deg);
+      animation-name: flyAway1;
+    }
+
+    .balloon2 {
+      left: 35%;
+      transform: translateX(-50%) rotate(10deg);
+      animation-name: flyAway2;
+    }
+
+    .balloon3 {
+      left: 65%;
+      transform: translateX(-50%) rotate(5deg);
+      animation-name: flyAway3;
+    }
+
+    @keyframes flyAway1 {
+      0% { bottom: 100px; opacity: 1; }
+      100% { bottom: 100vh; left: 30%; opacity: 0; }
+    }
+
+    @keyframes flyAway2 {
+      0% { bottom: 100px; opacity: 1; }
+      100% { bottom: 100vh; left: 20%; opacity: 0; }
+    }
+
+    @keyframes flyAway3 {
+      0% { bottom: 100px; opacity: 1; }
+      100% { bottom: 100vh; left: 70%; opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -90,7 +134,7 @@
 </div>
 
 <script>
-  // Simple confetti burst
+  // Confetti Setup
   const canvas = document.querySelector('.confetti');
   const ctx = canvas.getContext('2d');
   let confetti = [];
@@ -168,16 +212,43 @@
   addConfetti();
   animateConfetti();
 
-  // Card click logic
+  // Card Flip and Balloon Logic
   const card = document.getElementById('giftCard');
   let flipped = false;
+  let balloonsLaunched = false;
+
   card.addEventListener('click', () => {
-    if (!flipped) {
-      card.classList.add('flipped');
-      addConfetti(600); // Burst of confetti on flip
-      flipped = true;
+    flipped = !flipped;
+    card.classList.toggle('flipped');
+
+    if (flipped && !balloonsLaunched) {
+      addConfetti(600);
+      launchBalloons();
+      balloonsLaunched = true;
     }
   });
+
+  function launchBalloons() {
+    const balloonImages = [
+      '/images/head1.png',
+      '/images/head2.png',
+      '/images/head3.png'
+    ];
+    const container = document.body;
+
+    balloonImages.forEach((src, i) => {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon', `balloon${i + 1}`);
+      balloon.style.backgroundImage = `url(${src})`;
+      balloon.style.bottom = '100px';
+      container.appendChild(balloon);
+
+      // Remove balloon after animation
+      setTimeout(() => {
+        container.removeChild(balloon);
+      }, 4000);
+    });
+  }
 </script>
 
 </body>
