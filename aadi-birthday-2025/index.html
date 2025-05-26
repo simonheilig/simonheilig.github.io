@@ -196,7 +196,6 @@
     card.classList.toggle('flipped');
 
     if (flipped) {
-      addConfetti(600);
       launchBalloons();
     }
   });
@@ -216,7 +215,7 @@
       balloon.style.backgroundImage = `url(${src})`;
 
       // Randomize starting position near the card
-      const randomOffsetX = (Math.random() - 0.5) * 200; // -100px to +100px from center
+      const randomOffsetX = (Math.random() - 0.5) * 400; // -100px to +100px from center
       const randomBottom = 80 + Math.random() * 40;       // 80px to 120px from bottom
       const startLeft = centerX + randomOffsetX;
 
